@@ -12,6 +12,6 @@ exports.up = async function (knex) {
   });
 };
 
-exports.down = async function (knex) {
-  return await knex.schema.dropTableIfExists("cars");
+exports.down = function (knex) {
+  return knex.schema.dropTable("cars");
 };
